@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovative India - Success Stories</title>
+  <style>
+    /* Basic CSS for page layout and styling */
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+			background-color: #49d4ec;
+			color: black;
+			padding: 20px;
+			text-align: center;
+            background-image: url(fill.avif);
+			background-repeat: no-repeat;
+			/*background-size: cover;*/
+            background-attachment: fixed;
+            background-size: 100% 100%;
+	}
+		
+	.navbar {
+			background-color: orange;
+			padding: 10px;
+			text-align: center;
+	}
+		
+	.navbar ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+	}
+		
+	.navbar li {
+			display: inline-block;
+			margin-right: 20px;
+	}
+		
+	.navbar a {
+			color: black;
+			text-decoration: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .story-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .story-card:hover {
+      transform: translateY(-5px);
+    }
+    .story-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .story-content {
+      font-size: 1em;
+      line-height: 1.5em;
+      color: #333;
+    }
+    .more-info {
+      display: none;
+      margin-top: 10px;
+      color: #555;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    /* JavaScript Notification */
+    .notification {
+        display: none;
+        background-color: #27ae60;
+        color: white;
+        padding: 15px;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        border-radius: 5px;
+    }
+    .notification.show {
+            display: block;
+        }
+  </style>
+</head>
+<body>
+    <div class="header">
+		<h1>Innovative India: Success Stories</h1>
+	</div>
+	
+	<div class="navbar">
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About India</a></li>
+			<li><a href="initiatives.html">Initiatives</a></li>
+			<li><a href="success.html">Success Stories</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+ 
+  <div class="container">
+    <!-- Success Story 1 -->
+    <div class="story-card">
+      <div class="story-title">Story 1: Rise of Indian Startup Ecosystem</div>
+      <div class="story-content">
+        India’s startup ecosystem is one of the fastest-growing in the world. From small tech
+        startups to unicorns, this success has put India on the map of global innovation.
+        <div class="more-info">
+          Over 60,000 startups were founded in the last decade, with industries ranging from 
+          technology to healthcare, agriculture, and education.
+        </div><br>
+        <img src="startup.jfif"><br>
+        <button onclick="toggleMoreInfo(this)">Read More</button>
+      </div>
+    </div>
+    
+    <!-- Success Story 2 -->
+    <div class="story-card">
+      <div class="story-title">Story 2: Digital India Revolution</div>
+      <div class="story-content">
+        The Digital India initiative has transformed the nation by providing access to the internet 
+        for millions. This digital transformation has allowed for new businesses and improved public services.
+        <div class="more-info">
+          With initiatives like Aadhaar and UPI, India has become a leader in fintech innovation, 
+          with over 1 billion transactions processed monthly through digital platforms.
+        </div><br>
+        <img src="digital.jpg" height="200px" width="300px"><br>
+        <button onclick="toggleMoreInfo(this)">Read More</button>
+      </div>
+    </div>
+
+    <!-- Success Story 3 -->
+    <div class="story-card">
+      <div class="story-title">Story 3: Green Energy and Sustainability</div>
+      <div class="story-content">
+        India is quickly becoming a global leader in renewable energy, with investments in solar 
+        power, wind energy, and other green technologies.
+        <div class="more-info">
+          By 2022, India had installed over 100 GW of renewable energy capacity, contributing 
+          to a cleaner and more sustainable future.
+        </div><br>
+        <img src="green energy.png" height="200px" width="300px"><br>
+        <button onclick="toggleMoreInfo(this)">Read More</button>
+      </div>
+    </div>
+  </div>
+<!-- Notification -->
+<div id="notification" class="notification">
+    Let's see success story on Innovative India
+</div>
+  <script>
+    // JavaScript to toggle 'Read More' content
+    function toggleMoreInfo(button) {
+      const moreInfo = button.previousElementSibling;
+      if (moreInfo.style.display === "none" || moreInfo.style.display === "") {
+        moreInfo.style.display = "block";
+        button.textContent = "Read Less";
+      } else {
+        moreInfo.style.display = "none";
+        button.textContent = "Read More";
+      }
+    }
+  </script>
+   <!-- JavaScript -->
+   <script>
+    // Show notification when the page loads
+    window.onload = function() {
+        const notification = document.getElementById('notification');
+        notification.classList.add('show');
+
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 3000);
+    };
+</script>
+</body>
+</html>

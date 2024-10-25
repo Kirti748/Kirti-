@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovative India</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      background-image: url(flag4.avif);
+      /*background-size: cover;*/
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      color: #333;
+    }
+    .header {
+			background-color: #49d4ec;
+			color: black;
+			padding: 20px;
+			text-align: center;
+      background-image: url(fill.avif);
+			background-repeat: no-repeat;
+			/*background-size: cover;*/
+      background-attachment: fixed;
+      background-size: 100% 100%;
+		}
+		
+		.navbar {
+			background-color: orange;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.navbar ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.navbar li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		
+		.navbar a {
+			color: black;
+			text-decoration: none;
+		}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    /* Introduction Section */
+    .intro {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .intro h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+    }
+
+    .intro p {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0;
+      gap: 20px;
+    }
+
+    .feature {
+      background-color: #ffeb3b;
+      padding: 20px;
+      flex-basis: 30%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: green;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    /* JavaScript Notification */
+    .notification {
+      display: none;
+      background-color: #27ae60;
+      color: white;
+      padding: 15px;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      border-radius: 5px;
+    }
+    .notification.show {
+            display: block;
+        }
+    .footer p {
+      margin: 0;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .feature {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+		<h1>Innovative India</h1>
+	</div>
+	
+	<div class="navbar">
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About India</a></li>
+			<li><a href="initiatives.html">Initiatives</a></li>
+			<li><a href="success.html">Success Stories</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+
+  <!-- Introduction Section -->
+  <section class="intro">
+    <div class="container">
+      <h2>About Innovative India</h2>
+      <p>Innovative India is a vision of an advanced, forward-thinking nation where technology, innovation, and culture come together to create a sustainable future. We believe in fostering creativity, supporting start-ups, and promoting traditional values alongside cutting-edge technology.</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <h3>Technology Revolution</h3>
+        <p>India is becoming a global leader in technology innovation, from IT services to AI, robotics, and clean energy solutions.</p>
+      </div>
+      <div class="feature">
+        <h3>Start-Up Culture</h3>
+        <p>India has a vibrant start-up ecosystem, encouraging entrepreneurs to push boundaries and create innovative solutions for real-world problems.</p>
+      </div>
+      <div class="feature">
+        <h3>Digital Transformation</h3>
+        <p>With initiatives like Digital India, the country is moving towards a more digitally connected future, empowering millions with access to technology.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Notification -->
+  <div id="notification" class="notification">
+    Welcome to the "Home" page of Innovative India!
+</div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Innovative India. All rights reserved.</p>
+    </div>
+  </footer>
+<!-- JavaScript -->
+<script>
+  function exploreMore() {
+    alert("Thank you for exploring Innovative India. Stay tuned for more updates!");
+  }
+</script>
+ <!-- JavaScript -->
+ <script>
+  // Show notification when the page loads
+  window.onload = function() {
+      const notification = document.getElementById('notification');
+      notification.classList.add('show');
+
+      // Hide notification after 3 seconds
+      setTimeout(() => {
+          notification.classList.remove('show');
+      }, 3000);
+  };
+</script>
+</body>
+</html>

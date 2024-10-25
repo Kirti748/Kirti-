@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovative India Initiatives</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+			background-color: #49d4ec;
+			color: black;
+			padding: 20px;
+			text-align: center;
+            background-image: url(fill.avif);
+			background-repeat: no-repeat;
+			/*background-size: cover;*/
+            background-attachment: fixed;
+            background-size: 100% 100%;
+		}
+		
+		.navbar {
+			background-color: orange;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.navbar ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.navbar li {
+			display: inline-block;
+			margin-right: 20px;
+		}
+		
+		.navbar a {
+			color: black;
+			text-decoration: none;
+		}
+
+        .content {
+            margin: 20px;
+        }
+
+        .initiative-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .initiative-card h2 {
+            color: #2e86de;
+            margin-bottom: 10px;
+        }
+
+        .initiative-card p {
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        .initiative-card button {
+            background-color: #2e86de;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .initiative-card button:hover {
+            background-color: #216dbb;
+        }
+
+        footer {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* JavaScript Notification */
+        .notification {
+            display: none;
+            background-color: #27ae60;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            border-radius: 5px;
+        }
+        .notification.show {
+            display: block;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+		<h1>Innovative India Initiatives</h1>
+	</div>
+	
+	<div class="navbar">
+		<ul>
+			<li><a href="home.html">Home</a></li>
+			<li><a href="about.html">About India</a></li>
+			<li><a href="initiatives.html">Initiatives</a></li>
+			<li><a href="success.html">Success Stories</a></li>
+			<li><a href="contactus.html">Contact Us</a></li>
+		</ul>
+	</div>
+    <div class="content">
+        <div class="initiative-card">
+            <h2>Digital India</h2>
+            <p>Digital India is a flagship program of the Government of India with a vision to transform India into a digitally empowered society and knowledge economy.</p>
+            <button onclick="showDetails('Digital India focuses on three core areas: Digital Infrastructure as a Utility, Governance and Services on Demand, and Digital Empowerment of Citizens.')">Learn More</button>
+        </div>
+
+        <div class="initiative-card">
+            <h2>Startup India</h2>
+            <p>Startup India is a government initiative to promote and support entrepreneurship by mentoring, nurturing, and facilitating startups throughout India.</p>
+            <button onclick="showDetails('Startup India aims to build a strong ecosystem for nurturing innovation and startups in the country that will drive sustainable economic growth and generate large-scale employment.')">Learn More</button>
+        </div>
+
+        <div class="initiative-card">
+            <h2>Make in India</h2>
+            <p>Make in India is an initiative launched to encourage companies to manufacture in India and incentivize dedicated investments into manufacturing.</p>
+            <button onclick="showDetails('Make in India aims to transform India into a global manufacturing hub by promoting investment, fostering innovation, and building best-in-class infrastructure.')">Learn More</button>
+        </div>
+    </div>
+<!-- Notification -->
+<div id="notification" class="notification">
+    Welcome to the "Initiatives" page of Innovative India!
+</div>
+    <footer>
+        <p>&copy; 2024 Innovative India. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            // Simulate form submission
+            document.getElementById('success-message').style.display = 'block';
+
+            // Reset form after submission
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+ <!-- JavaScript -->
+ <script>
+    // Show notification when the page loads
+    window.onload = function() {
+        const notification = document.getElementById('notification');
+        notification.classList.add('show');
+
+        // Hide notification after 3 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 3000);
+    };
+</script>
+
+</body>
+</html>
